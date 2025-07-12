@@ -26,8 +26,8 @@ function createMenu() {
   clearContent();
   let divMenu = newMenu();
   const content = document.getElementById('content');
-  addMenuItem(divMenu, 'Tokujyo Rosu Katsu', 'Deep fried premium pork cut loin');
-  addMenuItem(divMenu, 'Cheese Katsu', 'Deep fried breaded mozzarella wrapped with thinly sliced pork loin');
+  addMenuItem(divMenu, 'Tokujyo Rosu UNAGI-DON', 'BBQ premium unagi');
+  addMenuItem(divMenu, 'Cheese UNAGI-DON', 'Deep fried breaded mozzarella wrapped with thinly sliced pork unagi');
   content.appendChild(divMenu);
 }
 
