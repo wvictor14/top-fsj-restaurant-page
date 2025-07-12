@@ -10,9 +10,12 @@ function newMenu() {
 
 function addMenuItem(menu, title, description) {
   const menuItem = document.createElement('div');
+  menuItem.classList.add('menu-item');
   const menuItemTitle = document.createElement('h4');
+  menuItemTitle.classList.add('menu-title');
   menuItemTitle.textContent = title;
   const menuItemDescription = document.createElement('p');
+  menuItemDescription.classList.add('menu-description');
   menuItemDescription.textContent = description;
   menuItem.appendChild(menuItemTitle);
   menuItem.appendChild(menuItemDescription);
