@@ -15,12 +15,25 @@ body {
   align-items: center;
   gap: 10px;
 }
+
 .headline {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px 200px;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 150px;
+}
+
+#content > .menu {
+  padding-top: 50px;
 }
 
 .headline > h1 {
