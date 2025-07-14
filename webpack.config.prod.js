@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: "./src/index.js",
   output: {
     filename: 'main.js',
@@ -18,11 +18,6 @@ module.exports = {
       template: "./src/template.html"
     })
   ],
-  "scripts": {
-    "build": "webpack",
-    "dev": "webpack serve",
-    "deploy": "git subtree push --prefix dist origin gh-pages",
-  },
   module: {
     rules: [
       {
