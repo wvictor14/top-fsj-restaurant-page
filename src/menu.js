@@ -1,5 +1,65 @@
 import clearContent from './clearContent.js'
 
+// using classes
+class MenuItem {
+  constructor(title, description) {
+    this.title = title;
+    this.description = description;
+  }
+
+  get title() {
+    return this._title;
+  }
+
+  set title(value) {
+    this._title = value;
+  }
+}
+
+// new MenuItem('katsu', 'breaded pork cutlet');
+class Menu {
+  constructor(items) {
+    this.items = items;
+  }
+
+  get items() {
+    return this._items;
+  }
+
+  set items(value) {
+    this._items = value;
+  }
+
+  displayMenu() {
+    const menu = document.createElement('div');
+    menu.classList.add('menu');
+    menu.classList.add('card');
+  }
+
+  addMenuItem(menu, title, description) {
+    const menuItem = document.createElement('div');
+    menuItem.classList.add('menu-item');
+    const menuItemTitle = document.createElement('h4');
+    menuItemTitle.classList.add('menu-title');
+    menuItemTitle.textContent = title;
+    const menuItemDescription = document.createElement('p');
+    menuItemDescription.classList.add('menu-description');
+    menuItemDescription.textContent = description;
+    menuItem.appendChild(menuItemTitle);
+    menuItem.appendChild(menuItemDescription);
+    menu.appendChild(menuItem);
+  }
+
+}
+
+kadonMenu = new Menu(
+  [
+    new MenuItem('katsu', 'breaded pork cutlet'),
+    new MenuItem('udon', 'noodles and stuff'),
+  ]
+);
+
+
 // initialize empty menu
 function newMenu() {
   const menu = document.createElement('div');
@@ -32,4 +92,5 @@ function createMenu() {
 }
 
 
+export { Menu, MenuItem };
 export default createMenu
